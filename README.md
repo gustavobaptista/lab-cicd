@@ -1,1 +1,1 @@
-# lab-cicd
+# lab-CICD
