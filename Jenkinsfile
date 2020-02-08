@@ -13,7 +13,8 @@ pipeline {
 	}
 		
 	stage ('Job Slack - Build') {
-	    // Shell build step
+	    steps {
+	        // Shell build step
 		sh """ curl -X POST -H 'Content-type: application/json' --data '{
             "text": "Build customizado iniciado!",
             "attachments": [
@@ -48,7 +49,7 @@ pipeline {
             ]
         }' https://hooks.slack.com/services/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 
         """
-       
+	    }
         }
     }
 }
