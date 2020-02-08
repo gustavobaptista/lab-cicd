@@ -10,6 +10,7 @@ pipeline {
                 sh 'mvn -B -DskipTests clean package'
 	        archiveArtifacts 'target/*.jar'
             }
+	}
 		
 	stage ('Job Slack - Build') {
 	    // Shell build step
@@ -47,7 +48,7 @@ pipeline {
             ]
         }' https://hooks.slack.com/services/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 
         """
-            }
+       
         }
     }
 }
